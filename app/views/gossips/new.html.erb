@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<h1>Les Gossips du groupe</h1>
+
+<%= form_with scope: :gossips, url: gossips_path, local: true do |form| %>
+  <p>
+    <%= form.label :anonymous_author %><br>
+    <%= form.text_field :anonymous_author %>
+  </p>
+
+  <p>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

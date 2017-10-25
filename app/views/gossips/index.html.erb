@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<h1>Listing Gossips</h1>
+
+<table>
+  <tr>
+    <th>Les Gossips</th>
+    <th>Text</th>
+  </tr>
+
+  <% @gossips.each do |gossips| %>
+    <tr>
+      <td><%= gossips.anonymous_author %></td>
+      <td><%= gossips.content %></td>
+      <td><%= link_to 'Montrer la Gossip', gossip_path(gossips) %></td>
+    </tr>
+  <% end %>
+</table>
